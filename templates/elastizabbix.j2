@@ -11,10 +11,10 @@ import errno
 ttl = {{ elastizabbix_ttl }}
 
 stats = {
-    {% raw %}"cluster": "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_cluster/stats",{% endraw %}
-    {% raw %}"nodes"  : "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_nodes/stats",{% endraw %}
-    {% raw %}"indices": "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_stats",{% endraw %}
-    {% raw %}"health" : "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_cluster/health"{% endraw %}
+    {% raw %}"cluster": "http://{% endraw %}{{ elastizabbix_url }}{% raw %}:9200/_cluster/stats",{% endraw %}
+    {% raw %}"nodes"  : "http://{% endraw %}{{ elastizabbix_url }}{% raw %}:9200/_nodes/stats",{% endraw %}
+    {% raw %}"indices": "http://{% endraw %}{{ elastizabbix_url }}{% raw %}:9200/_stats",{% endraw %}
+    {% raw %}"health" : "http://{% endraw %}{{ elastizabbix_url }}{% raw %}:9200/_cluster/health"{% endraw %}
 }
 
 {% raw %}
