@@ -6,13 +6,13 @@ Install and configure Zabbix plugin elastizabbix (https://github.com/mkhpalm/ela
 Installation
 ------------
 
-erozario.elastizabbix is an Ansible role distributed globally using Ansible Galaxy. In order to install erozario/grafana role you can use the following command.
+erozario.elastizabbix is an Ansible role distributed globally using Ansible Galaxy. In order to install erozario.elastizabbix role you can use the following command.
 
     $ ansible-galaxy install erozario.elastizabbix
     
 This only needs to be setup on one of the zabbix web interface
 
-- Import the XML template (supports zabbix 2.4 and greater)
+- Import the XML template (supports zabbix 2.4 and greater) files/templates_app_elasticsearch.xml
 - Add node to the newly imported template
 
 Requirements
