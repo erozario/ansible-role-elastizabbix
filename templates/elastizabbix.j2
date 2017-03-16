@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#! /usr/bin/python
 import os
 import sys
 import json
@@ -9,10 +9,10 @@ import errno
 ttl = {{ elastizabbix_ttl }}
 
 stats = {
-    'cluster': 'http://{{ elastizabbix_url }}:9200/_cluster/stats',
-    'nodes'  : 'http://{{ elastizabbix_url }}:9200/_nodes/stats',
-    'indices': 'http://{{ elastizabbix_url }}:9200/_stats',
-    'health' : 'http://{{ elastizabbix_url }}:9200/_cluster/health'
+    'cluster': 'http://'{{ elastizabbix_url }}':9200/_cluster/stats',
+    'nodes'  : 'http://'{{ elastizabbix_url }}':9200/_nodes/stats',
+    'indices': 'http://'{{ elastizabbix_url }}':9200/_stats',
+    'health' : 'http://'{{ elastizabbix_url }}':9200/_cluster/health'
 }
 
 def created_file(name):
