@@ -1,38 +1,51 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Install and configure Zabbix plugin elastizabbix (https://github.com/mkhpalm/elastizabbix) for monitoring Elasticsearch Cluster
+
+Installation
+------------
+
+erozario.elastizabbix is an Ansible role distributed globally using Ansible Galaxy. In order to install erozario.elastizabbix role you can use the following command.
+
+    $ ansible-galaxy install erozario.elastizabbix
+    
+This only needs to be setup on one of the zabbix web interface
+
+- Import the XML template (supports zabbix 2.4 and greater) files/templates_app_elasticsearch.xml
+- Add node to the newly imported template
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- Python 2/3 on an elastic node with zabbix agent installed
 
 Role Variables
 --------------
+    ---
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    elastizabbix_ttl: 10
+    elastizabbix_url: localhost
 
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: all
+      become: yes
       roles:
-         - { role: username.rolename, x: 42 }
+        - role: erozario.elastizabbix
+          elastizabbix_ttl: 15
+          elastizabbix_url: elasticsearch.com.br
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+https://www.linkedin.com/in/eduardo-rozario/
