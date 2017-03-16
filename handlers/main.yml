@@ -1,2 +1,4 @@
 ---
-# handlers file for elastizabbix
+
+- name: zabbix-agent restart
+  service: name=zabbix-agent state=restarted
