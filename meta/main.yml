@@ -12,4 +12,4 @@ galaxy_info:
   - zabbix
   - monitoring
   - elasticsearch
-dependencies: [dj-wasabi.zabbix-server]
+dependencies: [dj-wasabi.zabbix-agent]
