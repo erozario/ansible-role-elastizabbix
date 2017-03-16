@@ -1,4 +1,4 @@
 ---
 
 elastizabbix_ttl: 10
-elastizabbix: localhost
+elastizabbix_url: localhost
