@@ -6,16 +6,18 @@ import json
 import urllib2
 import time
 import errno
+{% endraw %}
 
 ttl = {{ elastizabbix_ttl }}
 
 stats = {
-    'cluster': 'http://'{{ elastizabbix_url }}':9200/_cluster/stats',
-    'nodes'  : 'http://'{{ elastizabbix_url }}':9200/_nodes/stats',
-    'indices': 'http://'{{ elastizabbix_url }}':9200/_stats',
-    'health' : 'http://'{{ elastizabbix_url }}':9200/_cluster/health'
+    {% raw %}"cluster": "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_cluster/stats",{% endraw %}
+    {% raw %}"nodes"  : "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_nodes/stats",{% endraw %}
+    {% raw %}"indices": "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_stats",{% endraw %}
+    {% raw %}"health" : "http://"{% endraw %}{{ elastizabbix_url }}{% raw %}":9200/_cluster/health"{% endraw %}
 }
 
+{% raw %}
 def created_file(name):
     try:
         fd = os.open(name, os.O_WRONLY | os.O_CREAT | os.O_EXCL)

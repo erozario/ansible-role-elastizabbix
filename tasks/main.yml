@@ -3,7 +3,7 @@
 - name: elastizabbix-configure | Add elastizabbix in /etc/zabbix/scritps
   template:
     src=elastizabbix.j2
-    dest=/etc/zabbix/scritps
+    dest=/etc/zabbix/scritps/elastizabbix
     owner=zabbix
     group=zabbix
     mode=0777
@@ -11,7 +11,7 @@
 - name: elastizabbix-configure | Add elastizabbix.conf in /etc/zabbix/conf.d
   copy:
     src=elastizabbix.conf
-    dest=/etc/zabbix/conf.d
+    dest=/etc/zabbix/conf.d/elastizabbix.conf
     owner=root
     group=root
     mode=0644
