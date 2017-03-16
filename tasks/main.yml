@@ -8,10 +8,10 @@
     group=zabbix
     mode=0777
 
-- name: elastizabbix-configure | Add elastizabbix.conf in /etc/zabbix/conf.d
+- name: elastizabbix-configure | Add elastizabbix.conf in /etc/zabbix/zabbix_agentd.d
   copy:
     src=elastizabbix.conf
-    dest=/etc/zabbix/conf.d/elastizabbix.conf
+    dest=/etc/zabbix/zabbix_agentd.d/elastizabbix.conf
     owner=root
     group=root
     mode=0644
