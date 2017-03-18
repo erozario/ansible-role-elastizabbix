@@ -36,7 +36,7 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: all
       become: yes
       roles:
-        - role: erozario.ansible-role-elastizabbix
+        - role: erozario.elastizabbix
           elastizabbix_ttl: 15
           elastizabbix_url: elasticsearch.com.br
 
