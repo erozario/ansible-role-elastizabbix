@@ -1,4 +1,4 @@
-Role Name
+Elastizabbix
 =========
 
 Install and configure Zabbix plugin elastizabbix (https://github.com/mkhpalm/elastizabbix) for monitoring Elasticsearch Cluster
