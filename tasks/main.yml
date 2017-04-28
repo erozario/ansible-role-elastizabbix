@@ -1,6 +1,6 @@
 ---
 
-- name: elastizabbix-configure | Creates directory /etc/zabbix/scritps
+- name: elastizabbix-configure | Creates directory /etc/zabbix/scripts
   file:
     path=/etc/zabbix/scripts
     state=directory
@@ -8,7 +8,7 @@
     group=root
     mode=0644
 
-- name: elastizabbix-configure | Add elastizabbix in /etc/zabbix/scritps
+- name: elastizabbix-configure | Add elastizabbix in /etc/zabbix/scripts
   template:
     src=elastizabbix.j2
     dest=/etc/zabbix/scripts/elastizabbix
